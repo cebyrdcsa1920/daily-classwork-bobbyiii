@@ -6,16 +6,24 @@ public class Car
     private Color color;
     private int numPassengers;
     private double amountOfGas;
+    public final double mpg;
 
     public Car()
     {
-         model ="Mustang"
+         model ="Mustang";
         color = Color.YELLOW;
        numPassengers = 2;
          amountOfGas= 20.5;
          mpg = 15.0;
     }
-
+        public Car(String model, Color color, int numPassengers, double amountGas, double mpg)
+        {
+            this.model = model;
+            this.color = color;
+            this.numPassengers = numPassengers;
+            this.amountOfGas = amountOfGas;
+            this.mpg = mpg
+        }
     /**
      * Drives the car the given distance. Subtracts gas from tank.
      *
@@ -23,7 +31,7 @@ public class Car
      */
         public void drive(double distance)
         {
-            amountOfGas = distance / mpg
+            amountOfGas = distance / mpg;
 
         }
         /**
@@ -34,11 +42,11 @@ public class Car
 
         public double getAmountOfGas()
         {
-            return amountOfGas()
+            return amountOfGas;
     }
     public String toString()
     {
-        return "This is my Mustang"
+        return "This is my Mustang";
     }
     /**
      * Fills up the gas tank
@@ -49,8 +57,5 @@ public class Car
      {
          amountOfGas += amount;
      }
-    public String toString()
-    {
 
-    }
 }
